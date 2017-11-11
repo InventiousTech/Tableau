@@ -29,22 +29,22 @@ $primaryKey = 'id';
 // parameter represents the DataTables column identifier. In this case simple
 // indexes
 $columns = array(
-    array( 'db' => 'first_name', 'dt' => 0 ),
-    array( 'db' => 'last_name',  'dt' => 1 ),
-    array( 'db' => 'num',   'dt' => 2 ),
     array(
         'db'        => 'dob',
         'dt'        => 3,
         'formatter' => function( $d, $row ) {
-            return date( 'jS M y', strtotime($d));
+            return date( 'D, d M Y H:i:s', strtotime($d));
         }
-    )
+    ),
+    array( 'db' => 'first_name', 'dt' => 0 ),
+    array( 'db' => 'last_name',  'dt' => 1 ),
+    array( 'db' => 'num',   'dt' => 2 )
 );
  
 // SQL server connection information
 $sql_details = array(
     'user' => 'tableau',
-    'pass' => 'YWX6PWrMRP3DFoJr',
+    'pass' => 'Mellon',
     'db'   => 'tableau',
     'host' => 'localhost'
 );
